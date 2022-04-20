@@ -1,0 +1,22 @@
+{
+  "version": 4,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 23,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "ninja",
+      "displayName": "Ninja",
+      "description": "Generate Ninja build files",
+      "generator": "Ninja"
+    },
+    {
+      "name": "unix-makefiles",
+      "displayName": "Unix-Makefiles",
+      "description": "Generate Unix Makefile build files",
+      "generator": "Unix Makefiles"
+    }
+  ]
+}
