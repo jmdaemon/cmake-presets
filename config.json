@@ -7,35 +7,38 @@
   },
   "configurePresets": [
     {
-      "name": "debug",
-      "displayName": "Debug",
-      "description": "Debug build using Ninja generator",
+      "name": "default",
+      "displayName": "Default",
+      "description": "Default build using Ninja generator",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_POSITION_INDEPENDENT_CODE": "TRUE",
-        "CMAKE_CXX_FLAGS": "-Wall -Wextra -pedantic -g -O0 -DDEBUG",
+        "CMAKE_CXX_FLAGS": "-Wall -Wextra -pedantic",
         "CMAKE_CXX_STANDARD": "20",
         "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
         "CMAKE_CXX_STANDARD_REQUIRED": "YES",
-        "CMAKE_CXX_EXTENSIONS": "OFF"
+        "CMAKE_CXX_EXTENSIONS": "OFF",
+        "CMAKE_POSITION_INDEPENDENT_CODE": "TRUE"
+      }
+    },
+    {
+      "name": "debug",
+      "inherits": "default",
+      "displayName": "Debug",
+      "description": "Debug build using Ninja generator",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS": "-Wall -Wextra -pedantic -g -O0 -DDEBUG"
       }
     },
     {
       "name": "release",
+      "inherits": "default",
       "displayName": "Release",
       "description": "Release build using Ninja generator",
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_POSITION_INDEPENDENT_CODE": "TRUE",
-        "CMAKE_CXX_FLAGS": "-Wall -Wextra -pedantic -O3 -DNDEBUG",
-        "CMAKE_CXX_STANDARD": "20",
-        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
-        "CMAKE_CXX_STANDARD_REQUIRED": "YES",
-        "CMAKE_CXX_EXTENSIONS": "OFF"
+        "CMAKE_CXX_FLAGS": "-Wall -Wextra -pedantic -O3 -DNDEBUG"
       }
     }
   ]
