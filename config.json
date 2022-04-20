@@ -9,8 +9,7 @@
     {
       "name": "default",
       "displayName": "Default",
-      "description": "Default build using Ninja generator",
-      "generator": "Ninja",
+      "description": "Default build flags",
       "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
         "CMAKE_CXX_FLAGS": "-Wall -Wextra -pedantic",
@@ -25,7 +24,7 @@
       "name": "debug",
       "inherits": "default",
       "displayName": "Debug",
-      "description": "Debug build using Ninja generator",
+      "description": "Debug build flags",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
         "CMAKE_CXX_FLAGS": "-Wall -Wextra -pedantic -g -O0 -DDEBUG"
@@ -35,7 +34,7 @@
       "name": "release",
       "inherits": "default",
       "displayName": "Release",
-      "description": "Release build using Ninja generator",
+      "description": "Release build flags",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "CMAKE_CXX_FLAGS": "-Wall -Wextra -pedantic -O3 -DNDEBUG"
