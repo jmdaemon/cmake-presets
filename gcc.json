@@ -10,32 +10,25 @@
   ],
   "configurePresets": [
     {
-      "name": "gcc-debug",
-      "inherits": "debug",
-      "displayName": "GCC-Debug",
-      "description": "Debug build using Ninja generator",
+      "name": "gcc",
+      "displayName": "GCC",
+      "description": "Build using GCC Compiler",
       "cacheVariables": {
         "CMAKE_C_COMPILER": "gcc",
         "CMAKE_CXX_COMPILER": "g++"
       }
     },
     {
+      "name": "gcc-debug",
+      "inherits": ["gcc", "debug"],
+      "displayName": "GCC-Debug",
+      "description": "Debug build using Ninja generator"
+    },
+    {
       "name": "gcc-release",
+      "inherits": ["gcc", "release"],
       "displayName": "GCC-Release",
-      "description": "Release build using Ninja generator",
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/build/${presetName}",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release",
-        "CMAKE_POSITION_INDEPENDENT_CODE": "TRUE",
-        "CMAKE_C_COMPILER": "gcc",
-        "CMAKE_CXX_COMPILER": "g++",
-        "CMAKE_CXX_FLAGS": "-Wall -Wextra -pedantic -O3 -DNDEBUG",
-        "CMAKE_CXX_STANDARD": "20",
-        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
-        "CMAKE_CXX_STANDARD_REQUIRED": "YES",
-        "CMAKE_CXX_EXTENSIONS": "OFF"
-      }
+      "description": "Release build using Ninja generator"
     }
   ]
 }
