@@ -21,25 +21,25 @@
     },
     {
       "name": "gcc-debug-ninja",
-      "inherits": ["gcc", "debug", "ninja"],
+      "inherits": ["ninja", "gcc", "debug"],
       "displayName": "GCC-Debug-Ninja",
       "description": "Debug build using GCC compiler & Ninja generator"
     },
     {
       "name": "gcc-debug-unix-makefiles",
-      "inherits": ["gcc", "debug", "unix-makefiles"],
+      "inherits": ["unix-makefiles", "gcc", "debug"],
       "displayName": "GCC-Debug-Unix-Makefiles",
       "description": "Debug build using GCC compiler & Unix Makefile generator"
     },
     {
       "name": "gcc-release-ninja",
-      "inherits": ["gcc", "release", "ninja"],
+      "inherits": ["ninja", "gcc", "release"],
       "displayName": "GCC-Release-Ninja",
       "description": "Release build using GCC compiler & Ninja generator"
     },
     {
       "name": "gcc-release-unix-makefiles",
-      "inherits": ["gcc", "release", "unix-makefiles"],
+      "inherits": ["unix-makefiles", "gcc", "release"],
       "displayName": "GCC-Release-Unix-Makefiles",
       "description": "Release build using GCC compiler & Unix Makefile generator"
     }
