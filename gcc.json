@@ -6,7 +6,8 @@
     "patch": 0
   },
   "include": [
-    "config.json"
+    "config.json",
+    "generators.json"
   ],
   "configurePresets": [
     {
@@ -19,16 +20,28 @@
       }
     },
     {
-      "name": "gcc-debug",
-      "inherits": ["gcc", "debug"],
-      "displayName": "GCC-Debug",
-      "description": "Debug build using Ninja generator"
+      "name": "gcc-debug-ninja",
+      "inherits": ["gcc", "debug", "ninja"],
+      "displayName": "GCC-Debug-Ninja",
+      "description": "Debug build using GCC compiler & Ninja generator"
     },
     {
-      "name": "gcc-release",
-      "inherits": ["gcc", "release"],
-      "displayName": "GCC-Release",
-      "description": "Release build using Ninja generator"
+      "name": "gcc-debug-unix-makefiles",
+      "inherits": ["gcc", "debug", "unix-makefiles"],
+      "displayName": "GCC-Debug-Unix-Makefiles",
+      "description": "Debug build using GCC compiler & Unix Makefile generator"
+    },
+    {
+      "name": "gcc-release-ninja",
+      "inherits": ["gcc", "release", "ninja"],
+      "displayName": "GCC-Release-Ninja",
+      "description": "Release build using GCC compiler & Ninja generator"
+    },
+    {
+      "name": "gcc-release-unix-makefiles",
+      "inherits": ["gcc", "release", "unix-makefiles"],
+      "displayName": "GCC-Release-Unix-Makefiles",
+      "description": "Release build using GCC compiler & Unix Makefile generator"
     }
   ]
 }
