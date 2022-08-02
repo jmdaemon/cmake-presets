@@ -28,7 +28,8 @@
       "description": "Debug build flags",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_CXX_FLAGS": "-Wall -Wextra -pedantic -g -O0 -DDEBUG"
+        "CMAKE_CXX_FLAGS": "-Wall -Wextra -pedantic -g -O0 -DDEBUG",
+        "BUILD_TESTING": "ON"
       }
     },
     {
